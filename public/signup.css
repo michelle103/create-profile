@@ -14,26 +14,20 @@ body {
   font-family: 'Work Sans', sans-serif;
 }
 
-.login {
+.signup {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 30rem;
+  margin-top: 26rem;
 }
 
 h1 {
   font-size: 2.6rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
-.warning {
-  color: red;
-  text-align: center;
-  font-size: 1.6rem;
-  padding: 0.5rem 1rem;
-}
-
-.login__form {
+.signup__form {
   background-color: #3b3b3b;
   padding: 2rem 6rem;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
@@ -63,7 +57,7 @@ input {
   background-color: #1873cc;
 }
 
-.signup {
+.back {
   display: block;
   text-align: right;
   text-decoration: none;

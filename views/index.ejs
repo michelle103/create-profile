@@ -13,23 +13,39 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="index.css" />
+    <script defer src="index.js"></script>
   </head>
   <body>
-    <section class="login">
-      <div class="login__container">
-        <h1>Welcome!</h1>
+    <div class="login">
+      <form action="/" method="POST" class="login__form">
         <% if (error) { %>
         <p class="warning"><%= error %></p>
         <% } %>
-        <div class="login__form">
-          <form action="/" method="POST">
-            <input type="email" name="email" placeholder="email" />
-            <input type="password" name="password" placeholder="password" />
-            <input type="submit" value="login" class="btn" />
-          </form>
-        </div>
-        <a href="/signup" class="signup">signup &rarr;</a>
+          <div class="input-container">
+            <div class="icon-container">
+              <ion-icon name="person" class="icon"></ion-icon>
+            </div>
+            <input type="email" name="email" placeholder="email" id="email" />
+          </div>
+          <div class="input-container">
+            <div class="icon-container">
+              <ion-icon name="lock-closed" class="icon"></ion-icon>
+            </div>
+            <input type="password" name="password" placeholder="password" id="password" />
+          </div>
+          <input type="submit" value="login" class="btn" />
+          <a href="/signup" class="signup">Don't have an account? Sign up</a>
+        </form>
       </div>
-    </section>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>

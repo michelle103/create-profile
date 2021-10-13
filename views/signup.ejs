@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign up!</title>
+    <title>Log in!</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,24 +13,45 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="signup.css" />
+    <script defer src="index.js"></script>
   </head>
   <body>
-    <section class="signup">
-      <div class="signup__container">
-        <h1>Signup</h1>
+    <div class="signup">
+      <form action="/signup" method="POST" class="signup__form">
         <% if (error) { %>
         <p class="warning"><%= error %></p>
         <% } %>
-        <div class="signup__form">
-          <form action="/signup" method="POST">
-            <input type="text" name="username" placeholder="username" />
-            <input type="email" name="email" placeholder="email" />
-            <input type="password" name="password" placeholder="password" />
-            <input type="submit" value="signup" class="btn" />
-          </form>
+        <div class="input-container">
+          <div class="icon-container">
+            <ion-icon name="mail" class="icon"></ion-icon>
+          </div>
+          <input type="username" name="username" placeholder="username" id="username" />
         </div>
-        <p><a href="/" class="back">&larr; back</a></p>
+          <div class="input-container">
+            <div class="icon-container">
+              <ion-icon name="person" class="icon"></ion-icon>
+            </div>
+            <input type="email" name="email" placeholder="email" id="email" />
+          </div>
+          <div class="input-container">
+            <div class="icon-container">
+              <ion-icon name="lock-closed" class="icon"></ion-icon>
+            </div>
+            <input type="password" name="password" placeholder="password" id="password" />
+          </div>
+          <input type="submit" value="signup" class="btn" />
+          <a href="/" class="login">Already have an account? Log in</a>
+        </form>
       </div>
-    </section>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>

@@ -6,61 +6,93 @@
 
 html {
   font-size: 10px;
+  height: 100%;
 }
 
 body {
-  background-color: #282828;
-  color: #fff;
+  background-color: #fff;
   font-family: 'Work Sans', sans-serif;
+  height: 100%;
 }
 
 .signup {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 26rem;
-}
-
-h1 {
-  font-size: 2.6rem;
-  margin-bottom: 1rem;
-  text-align: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .signup__form {
-  background-color: #3b3b3b;
-  padding: 2rem 6rem;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-  margin-bottom: 0.5rem;
-  border-radius: 3px;
+  height: 38rem;
+  width: 36rem;
+  box-shadow: 0px 0px 4px #ced4da;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ced4da;
+  margin: 2rem 0;
+  width: 25rem;
+}
+
+.icon {
+  font-size: 2.4rem;
+  color: #ced4da;
+  margin: 0 1rem 1rem 0;
 }
 
 input {
-  display: block;
-  padding: 0.3rem;
+  border: none;
+  color: #ced4da;
+  font-size: 2rem;
   font-family: 'Work Sans', sans-serif;
-  font-size: 1.6rem;
   margin-bottom: 1rem;
+  outline: none;
+}
+
+input::placeholder {
+  font-size: 1.6rem;
 }
 
 .btn {
-  border: none;
-  margin: 1.5rem 0 0 0;
-  width: 20.1rem;
-  background-color: #1e90ff;
+  display: block;
+  padding: 0.75rem 0;
+  width: 25rem;
+  margin-top: 4rem;
+  font-size: 2.2rem;
   color: #fff;
-  font-family: 'Work Sans', sans-serif;
+  background-color: #5c7cfa;
   cursor: pointer;
+  border-radius: 3px;
 }
 
 .btn:hover {
-  background-color: #1873cc;
+  background-color: #364fc7;
 }
 
-.back {
-  display: block;
-  text-align: right;
+.login:link,
+.login:visited {
+  color: #adb5bd;
   text-decoration: none;
-  color: green;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+}
+
+.login:active,
+.login:hover {
+  color: #868e96;
+}
+
+.warning {
+  width: 25rem;
+  color: #f03e3e;
+  font-size: 1.2rem;
+  padding: 0.3rem;
+  text-align: center;
 }

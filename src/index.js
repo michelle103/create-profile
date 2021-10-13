@@ -15,7 +15,7 @@ app.use(
     name: 'user_sid',
     resave: false,
     saveUninitialized: false,
-    secret: 'some secret key',
+    secret: process.env.SESSION_SECRET,
     store: MongoStore.create({
       mongoUrl: process.env.MONGODB_URL,
     }),
